@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import { ProfileCard } from "@/components/layout/profile-card";
 import { SidebarNav } from "@/components/layout/sidebar-nav";
 import type { SectionNavItem } from "@/data/nav-items";
 
@@ -59,6 +60,7 @@ export function MobileNav({ items }: MobileNavProps) {
             </div>
 
             <div className="mobile-nav__content" id="mobile-section-nav">
+              <ProfileCard compact />
               <SidebarNav items={items} onNavigate={() => setOpen(false)} />
             </div>
           </div>

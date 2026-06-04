@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 
+import { siteConfig } from "@/data/site";
+
 import "./globals.css";
 
 const geist = Geist({
@@ -9,19 +11,36 @@ const geist = Geist({
 
 const siteTitle = "smjcodes | Full Stack Developer Portfolio";
 const siteDescription =
-  "Documentation-style portfolio for smjcodes featuring full stack services, projects, case studies, skills, experience, and contact information.";
+  "Muhammad Junaid is a Full-Stack and AI Engineer building scalable web apps, CRM systems, SEO-friendly platforms, AI voice agents, and LLM-powered products.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://smjcodes.dev"),
+  metadataBase: new URL(siteConfig.siteUrl),
   title: siteTitle,
   description: siteDescription,
+  applicationName: "smjcodes Portfolio",
+  authors: [{ name: siteConfig.fullName, url: siteConfig.siteUrl }],
+  creator: siteConfig.fullName,
+  publisher: siteConfig.fullName,
+  category: "technology",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    telephone: false,
+    address: false
+  },
   keywords: [
     "smjcodes",
+    "Muhammad Junaid",
     "full stack developer",
+    "AI engineer",
     "Next.js developer",
     "React portfolio",
     "Laravel developer",
+    "Node.js developer",
+    "LLM integrations",
+    "AI voice agent developer",
     "eCommerce developer",
+    "CRM developer",
     "SaaS developer"
   ],
   openGraph: {
@@ -29,12 +48,22 @@ export const metadata: Metadata = {
     description: siteDescription,
     siteName: "smjcodes",
     type: "website",
-    url: "https://smjcodes.dev"
+    locale: "en_US",
+    url: siteConfig.siteUrl,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.fullName} portfolio preview`
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
-    description: siteDescription
+    description: siteDescription,
+    images: ["/twitter-image"]
   },
   alternates: {
     canonical: "/"

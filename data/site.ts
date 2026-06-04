@@ -1,5 +1,23 @@
 export const siteConfig = {
   name: "smjcodes",
+  siteUrl: "https://smjcodes.dev",
+  linkedInUrl: "https://www.linkedin.com/in/dspjunaid",
+  brand: {
+    logo: {
+      src: "/logo.png",
+      alt: "smjcodes logo",
+      width: 220,
+      height: 55
+    }
+  },
+  profile: {
+    photo: {
+      src: "/junaid.jpeg",
+      alt: "Portrait of Muhammad Junaid",
+      width: 192,
+      height: 192
+    }
+  },
   fullName: "Muhammad Junaid",
   role: "Full-Stack & AI Engineer",
   headline: "Full-Stack & AI Engineer building scalable web apps, CRM systems, and AI-powered products.",
