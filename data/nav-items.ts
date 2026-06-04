@@ -7,6 +7,7 @@ export type TopNavItem = {
   href: string;
   label: string;
   external?: boolean;
+  download?: boolean | string;
 };
 
 export const sectionNavItems: SectionNavItem[] = [
@@ -23,7 +24,7 @@ export const sectionNavItems: SectionNavItem[] = [
 export const topNavLinks: TopNavItem[] = [
   { href: "#introduction", label: "Home" },
   { href: "https://www.linkedin.com/in/dspjunaid", label: "LinkedIn", external: true },
-  { href: "#experience", label: "Resume" },
+  { href: "/resume.pdf", label: "Download Resume", download: "Muhammad-Junaid-Resume.pdf" },
   { href: "#contact", label: "Email" }
 ];
 

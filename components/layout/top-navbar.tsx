@@ -33,6 +33,7 @@ export function TopNavbar() {
               {topNavLinks.map((item) => (
                 <li key={item.label}>
                   <a
+                    download={item.download || undefined}
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noreferrer" : undefined}
@@ -70,6 +71,7 @@ export function TopNavbar() {
             {topNavLinks.map((item) => (
               <li key={item.label}>
                 <a
+                  download={item.download || undefined}
                   href={item.href}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noreferrer" : undefined}
