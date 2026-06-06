@@ -12,11 +12,19 @@ const geist = Geist({
 const siteTitle = "smjcodes | Full Stack Developer Portfolio";
 const siteDescription =
   "Muhammad Junaid is a Full-Stack and AI Engineer building scalable web apps, CRM systems, SEO-friendly platforms, AI voice agents, and LLM-powered products.";
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: siteTitle,
   description: siteDescription,
+  ...(googleSiteVerification
+    ? {
+        verification: {
+          google: googleSiteVerification
+        }
+      }
+    : {}),
   applicationName: "smjcodes Portfolio",
   authors: [{ name: siteConfig.fullName, url: siteConfig.siteUrl }],
   creator: siteConfig.fullName,
